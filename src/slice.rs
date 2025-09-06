@@ -150,7 +150,7 @@ pub fn fftshift<T: Copy + Default>(width: usize, height: usize, matrix: &[T]) ->
 ///
 /// [incorrect behaviour]: https://github.com/mpizenberg/fft2d/pull/9#issuecomment-3261540533
 /// [detailed explanation]: https://github.com/mpizenberg/fft2d/pull/9#issuecomment-3259605569
-/// 
+///
 /// This have likely [incorrect behaviour] if you have odd dimensions.
 ///
 /// You can also check the [detailed explanation].
