@@ -148,8 +148,12 @@ pub fn fftshift<T: Copy + Default>(width: usize, height: usize, matrix: &[T]) ->
 /// Shift the 4 quadrants of a Fourier transform to have all the low frequencies
 /// at the center of the image.
 ///
-/// This have different behaviour than fftshift if have odd dimensions.
-/// [detailed explanation](https://github.com/mpizenberg/fft2d/pull/9#issuecomment-3259605569)
+/// [incorrect behaviour]: https://github.com/mpizenberg/fft2d/pull/9#issuecomment-3261540533
+/// [detailed explanation]: https://github.com/mpizenberg/fft2d/pull/9#issuecomment-3259605569
+/// 
+/// This have likely [incorrect behaviour] if you have odd dimensions.
+///
+/// You can also check the [detailed explanation].
 ///
 /// ## Safety
 /// You must keep `matrix.len() >= height * width`.
